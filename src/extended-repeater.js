@@ -1,5 +1,13 @@
-module.exports = function repeater(/* str, options */) {
-    throw 'Not implemented';
-    // remove line with error and write your code here
+module.exports = function repeater(str, options) {
+    let result = '';
+    let separ = '+';
+    if (options.separator) {
+        separ = options.separator;
+    }
+    if (options.repeatTimes) {
+        result = (str + separ) * options.repeatTimes;
+    }
+    
+    return result;
 };
   
